@@ -93,18 +93,12 @@ a.skip{
 
 
 /* Requirement 4 code here*/
-/* Any link in the nav that is in focus should have a
-2px yellow border on the top with no other lines around it.* */
 nav a:focus {
-  border-top: solid 2px yellow;
+  border-top: 2px solid yellow;
 }
 
 .container{
   /* Requirement 5 code here*/
-  /* Uses grid
-Has three columns of 1fr 5fr 1fr
-Has a 30px gap between rows (use row-gap)
- */
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   row-gap: 30px;
@@ -112,7 +106,8 @@ Has a 30px gap between rows (use row-gap)
 
 /* Requirements 6-10 here: */
 .intro {
-  background-color: #DDDDDD;
+  /* parallax code from W3 */
+  background-color: #707070;
   /* , #858585, #707070, or #B3B3B3 */
   background-image: url("images/header.jpg");
   min-height: 400px;
@@ -121,22 +116,39 @@ Has a 30px gap between rows (use row-gap)
   background-repeat: no-repeat;
   background-size: cover;
 }
-.about, .clients, .method, .contant {
+.about, .clients, .method, .contact {
   grid-column: 2 / span 1;
 }
+
 img {
   width: 100%;
-} 
+}
+
 .about-image, .clients-image, .method-image, .contact-image {
   grid-column: 1 / span 3; 
   /* covers all four ^ */
   max-height: 500px;
   overflow: hidden;
 }
+.about-image, .about {
+  grid-row: 1 / span 1;
+}
+
+.contact-image, .contact {
+  grid-row: 4 / span 1;
+}
+
+.method-image, .method {
+  grid-row: 3 / span 1;
+}
+
+.clients-image, .clients {
+  grid-row: 2 / span 1;
+}
 
 .text {
   /* text and images are on the same level */
-  text-align: center;
+  align-self: center;
   max-height: 25%;
   overflow: scroll;
 }
@@ -154,23 +166,23 @@ img {
     margin-right:0;
   }
 
-  
   /* Requirements 12-15 here: */
   a.skip:focus {
     left: 0px;
     top: 20px;
   }
   /* container class */
-  .cotainer {
+  .container {
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
   }
-.about, .method, .clients-image, .contact-image {
-  grid-column: 3 / span 2;
-}
-.clients, .contact, .about-image, .method-image {
-  grid-column: 2 / span 2;
-}
+
+  .about, .method, .clients-image, .contact-image {
+    grid-column: 3 / span 2;
+  }
+  .clients, .contact, .about-image, .method-image {
+    grid-column: 2 / span 2;
+  }
 }
 
 
