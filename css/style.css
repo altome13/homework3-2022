@@ -148,7 +148,7 @@ img {
 
 .text {
   /* text and images are on the same level */
-  align-self: center;
+  text-align: center;
   max-height: 25%;
   overflow: scroll;
 }
