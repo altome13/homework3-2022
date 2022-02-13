@@ -109,7 +109,7 @@ nav a:focus {
   /* parallax code from W3 */
   background-color: #707070;
   /* , #858585, #707070, or #B3B3B3 */
-  background-image: url("images/header.jpg");
+  background-image: url("../images/header.jpg");
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -130,7 +130,7 @@ img {
   max-height: 500px;
   overflow: hidden;
 }
-.about-image, .about {
+/* .about-image, .about {
   grid-row: 1 / span 1;
 }
 
@@ -144,7 +144,7 @@ img {
 
 .clients-image, .clients {
   grid-row: 2 / span 1;
-}
+} */
 
 .text {
   /* text and images are on the same level */
